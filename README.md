@@ -30,7 +30,10 @@ La busqueda no es case sensitive y se puede ingresar parte del texto.
 Si el Apellido o Documento no existe, esta la posibilidad de darlo de alta. 
 ![Alta](images/alta.png)
 
-Se debe colocar los archivos en el servidor donde esta alojado el cliente:\
+Modificar los archivos config.php y api.php reemplazando https://openemr-domain y https://client-domain\
+por los reales.\
+Se debe colocar los archivos api.php, config.php, index.php y jwks.json (la carpeta images no es necesario)\
+en el servidor donde esta alojado el cliente:\
 Ejemplo: https://domain-client/api/<colocar aqui>.\
 Hay que tener en cuenta que tanto el cliente como el servidor donde esta alojado OpenEMR,\
 deben ser Seguros (https).\
