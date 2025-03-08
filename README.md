@@ -10,7 +10,7 @@ Generar set con estos parametros:\
 • Key ID: SHA-256\
 • Show X.509 : Yes\
 Elegir Public and Private Keypair Set, agregar ese contenido al archivo jwks.json.\
-<br/>
+
 Ejemplo registro cliente:
 ![Registro](image.png)
 Cliente API para OpenEMR. Busca paciente por Apellido o por Documento (pubpid).
@@ -28,6 +28,6 @@ La busqueda no es case sensitive y se puede ingresar parte del texto.
 ![Busqueda](busqueda.png)
 
 Si el Apellido o Documento no existe, esta la posibilidad de darlo de alta. 
-![Alta](alta.png)
-<br/>
+![Alta](alta.png)\
+
 La mayoria del código fue realizado con Grok AI.
