@@ -34,7 +34,7 @@ Modificar los archivos config.php y api.php reemplazando https://openemr-domain 
 por los reales.\
 Se debe colocar los archivos api.php, config.php, index.php y jwks.json (la carpeta images no es necesario)\
 en el servidor donde esta alojado el cliente:\
-Ejemplo: https://domain-client/api/(colocar aqui).\
+Ejemplo: https://domain-client/api/ (colocar aqui).\
 Hay que tener en cuenta que tanto el cliente como el servidor donde esta alojado OpenEMR,\
 deben ser Seguros (https).\
 
