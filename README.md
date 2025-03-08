@@ -1,14 +1,19 @@
 Cliente API para OpenEMR. Busca paciente por Apellido o por Documento (pubpid).
-![Login](login.png)
 Debe ser un usuario con permiso de leer y agregar datos del paciente.
-![Authorize](authorize.png)
+![Login](login.png)
+
 Click en Authorize.
-![Inicio-Cliente](inicio-cliente.png)
+![Authorize](authorize.png)
+
 Cliente, elegis Apellido o Documento.
+![Inicio-Cliente](inicio-cliente.png)
+
+La busqueda no es case sensitive y se puede ingresar parte del texto.
 ![Busqueda](busqueda.png)
-La busqueda no es case sensitive.
-![Alta](alta.png)
+
 Si el Apellido o Documento no existe, esta la posibilidad de darlo de alta. 
+![Alta](alta.png)
+
 Para obtener JSON Web Key Sets (jwks.json) ir al sitio https://mkjwk.org/,
 Generar set con estos parametros:
 • Key Size: 2048
