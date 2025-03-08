@@ -1,4 +1,5 @@
 Cliente API para OpenEMR. Busca paciente por Apellido o por Documento (pubpid).
+
 Debe ser un usuario con permiso de leer y agregar datos del paciente.
 ![Login](login.png)
 
