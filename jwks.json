@@ -1,0 +1,12 @@
+{
+    "keys": [
+        {
+            "kty": "RSA",
+            "alg": "RS256",
+            "use": "sig",
+            "kid": "clave_buscador_2025",
+            "n": "qF6upPooOTquBZfqfX0cmL0MYA5ksvzkOV_QplVZaC6ubRMLcwnMxhEtYTQxNulYI4RH3qjffKMxD2EMKlv0mFWvQu6hbRLKwPzHuAbKaCQhazwUF6w2DLHRS7DcoEaqop6ZPd-6-5ekcfZIqiP4cnXScijz0lR91-KUG428R8pnNpoEhlertEnPyF8a3gGUpDpE2lXkYfPF3pa2y7HeBwC5zxOaPbbgFGqfvNedJLEzsLHlx8ksEx3o7dThGvepoS_TvWOmpM1vnMeILtKo5DzEMAhEFX6UNDDUacorU33uMSaI8Py7znO1DtBktICcOq83Hg8-fyqpMuEIq0e7Aw",
+            "e": "AQAB"
+        }
+    ]
+}
