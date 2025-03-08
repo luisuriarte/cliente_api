@@ -28,6 +28,6 @@ La busqueda no es case sensitive y se puede ingresar parte del texto.
 ![Busqueda](images/busqueda.png)
 
 Si el Apellido o Documento no existe, esta la posibilidad de darlo de alta. 
-![Alta](images/alta.png)\
+![Alta](images/alta.png)
 
 La mayoria del código fue realizado con Grok AI.
