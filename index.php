@@ -74,7 +74,7 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
                         </div>
                         <div class="mb-3">
                             <label for="middleName" class="form-label">Segundo Nombre</label>
-                            <input type="text" class="form-control" id="middleName" name="middleName"> <!-- Quité required -->
+                            <input type="text" class="form-control" id="middleName" name="middleName">
                         </div>
                         <div class="mb-3">
                             <label for="lastName" class="form-label">Apellido</label>
@@ -87,7 +87,7 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
                                 <option value="Male">Hombre</option>
                                 <option value="Female">Mujer</option>
                                 <option value="non_binary">No binario</option>
-                                <option value="Unknown">Desconocido</option>
+                                <option value="UNK">Desconocido</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -98,7 +98,10 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
                             <label for="birthDate" class="form-label">Fecha de Nacimiento</label>
                             <input type="date" class="form-control" id="birthDate" name="birthDate" required>
                         </div>
-                        <button type="submit" class="btn btn-success">Registrar</button>
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success">Registrar</button>
+                            <button type="button" id="cancelRegisterBtn" class="btn btn-secondary">Cancelar</button>
+                        </div>
                     </form>
                     <div id="registerResult" class="mt-3"></div>
                 </div>
@@ -202,13 +205,12 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
             $('#registerForm').submit(function(e) {
                 e.preventDefault();
                 const firstName = $('#firstName').val();
-                const middleName = $('#middleName').val(); // Puede estar vacío
+                const middleName = $('#middleName').val();
                 const lastName = $('#lastName').val();
                 const gender = $('#gender').val();
                 const document = $('#document').val();
                 const birthDate = $('#birthDate').val();
 
-                // Validar campos obligatorios (sin middleName)
                 if (!firstName || !lastName || !gender || !document || !birthDate) {
                     let missingFields = [];
                     if (!firstName) missingFields.push("Primer Nombre");
@@ -220,7 +222,6 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
                     return;
                 }
 
-                // Primero verificar si el documento ya existe
                 $.ajax({
                     url: 'api.php',
                     method: 'GET',
@@ -279,7 +280,7 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
                             const data = {
                                 action: 'register',
                                 firstName: firstName,
-                                middleName: middleName, // Puede estar vacío
+                                middleName: middleName,
                                 lastName: lastName,
                                 gender: gender,
                                 document: document,
@@ -313,6 +314,12 @@ if (!isset($_SESSION['mi_app_access_token']) && isset($_COOKIE['access_token']))
                         $('#registerResult').html('<p class="text-danger">Error al verificar documento.</p>');
                     }
                 });
+            });
+
+            // Evento para el botón Cancelar
+            $('#cancelRegisterBtn').click(function() {
+                $('#registerCard').hide();
+                $('#searchResults').html(''); // Limpia los resultados para volver al estado inicial
             });
         });
     </script>
