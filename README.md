@@ -36,6 +36,6 @@ Se debe colocar los archivos api.php, config.php, index.php y jwks.json (la carp
 en el servidor donde esta alojado el cliente:\
 Ejemplo: https://domain-client/api/ (colocar aqui).\
 Hay que tener en cuenta que tanto el cliente como el servidor donde esta alojado OpenEMR,\
-deben ser Seguros (https).\
+deben ser Seguros (https).
 
 La mayoria del código fue realizado con Grok AI.
