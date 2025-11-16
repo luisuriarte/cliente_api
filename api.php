@@ -85,7 +85,7 @@ if ($method === 'GET' && $action === 'search') {
 
     logDebug("Buscando paciente con query: $query, tipo: $searchType");
 
-    $url = "https://hcd.origen.ar/apis/default/fhir/Patient?";
+    $url = "https://openemr-domain/apis/default/fhir/Patient?";
     if ($searchType === 'family') {
         $url .= "family=" . urlencode($query);
     } elseif ($searchType === 'identifier') {
