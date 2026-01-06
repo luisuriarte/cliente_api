@@ -2,7 +2,7 @@
 
 Primero se debe registrar un cliente similar como esta la imagen
 
-Para obtener JSON Web Key Sets (jwks.json) ir al sitio https://mkjwk.org/,\
+Para obtener JSON Web Key Sets (jwks.json) ir al sitio https://mkjwk.org,
 Generar set con estos parametros:\
 • Key Size: 2048\
 • Key Use: Signature\
